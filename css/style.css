@@ -1,0 +1,840 @@
+/*-------Start of General Rules--------*/
+
+*,*::after,*::before{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: Raleway;
+}
+.wrapper{
+    margin: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.clearfix{clear: both;}
+/*-------End of General Rules--------*/
+
+
+/*---------Start of navbar----------*/
+
+.navbar{  height: 70px;  background-color: black; overflow: hidden;}
+.navbar .logo{ float: left;}
+.navbar .logo h1{ color: #FFF; margin: 0;}
+.navbar .logo h1 span{  font-weight: 400;  color: #ff8b38;  line-height: 2.5;}
+.navbar .links{float: right;}
+.navbar .links ul{ list-style: none; color: #848484;}
+.navbar .links ul li {
+    display: inline-block;
+    font-weight: 800;
+    margin-top: 30px;
+    margin-left: 10px;
+}
+.navbar .links ul li:hover{cursor: pointer; color: #fff;}
+
+@media (max-width: 767px){ /*  For mobile &  tablet rules  */
+    .navbar{height: 107px; text-align: center; width: 100%;}
+    .navbar .logo, .navbar .links{float: none;}
+    .navbar .links ul li{margin-top: 0;}
+}
+@media (max-width: 385px){ /* custom */
+    .navbar{height: 116px !important;}
+}
+/*---------End of navbar----------*/
+
+/*--------Start of Section---------*/
+
+section{
+    height: 500px;
+    padding-top: 30px;
+    background-image: url('https://i.postimg.cc/2yT35nQ7/buildings.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+section .content{ float: left; width: 45%;}
+section .form{ float: right; width: 30%;   }
+section .content h1{ color: #FFF; font-size: 70px; margin: 0px;}
+section .content h1 span{ font-weight: 400; color: #ff8b38;}
+section .content p:first-of-type{
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 20px;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+section .content hr{
+    outline: none;
+    border: 2px solid #FFF;
+    width: 50px;
+    margin-bottom: 10px;
+}
+section .content p:last-of-type{ color: #fff; line-height: 1.6; margin-bottom: 28px;}
+section .content button{
+    color: #fff;
+    outline: none;
+    background: none;
+    border: 2px solid #fff;
+    padding: 10px 30px 10px 30px;
+}
+section .form{
+    background-color: #fff;
+    height:313px;
+    border-radius: 10px;
+}
+section .form h2{
+    text-align: center;
+    padding: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color: #f5f5f5;
+}
+section .form h2 span{ color: #ff8b38;}
+section .form input{
+    display: block;
+    margin: auto;
+    border: none;
+    outline: none;
+    width: 85%;
+    text-align: left;
+    padding: 10px;
+    margin-top: 15px;
+    border-bottom: 1px solid #d6d6d6;
+}
+section .form button{
+    background-color: #ff8b38;
+    color: #fff;
+    width: 100%;
+    outline: none;
+    border: none;
+    padding: 20px;
+    margin-top: 54px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+section .form button:hover{cursor: pointer;}
+section .content button:hover{ cursor: pointer; background-color:  rgba(150, 150, 150,0.5);}
+
+
+@media (max-width: 767px){ /*  For mobile &  tablet rules  */
+    section{height: 850px;width: 100%;}
+    section .content, section .form{float: none; margin: 15px auto 0; width: 70%;}
+}
+
+
+/*--------End of Section---------*/
+
+/*--------Start of Social--------*/
+.social{ height: 100px; padding-top: 30px; border-bottom: 2px solid #CFCFCF;}
+.social .container{ display: flex; justify-content: space-between;}
+.social .container .social-left{ width: 350px;}
+.social .container .social-left h2{  color: #000;  font-family: open-sans;  font-weight: 800;}
+.social .container .social-left p{color: #888;}
+.social .container .social-right{  width: 500px;  color:#CCCCCC;  display: flex;  justify-content: space-around;}
+.social .container .social-right i{transition: all 0.5s ease-out;}
+.social .container .social-right i:hover{cursor: pointer; transform: scale(1.4);}
+@media (max-width: 767px){ /*  For mobile &  tablet rules  */
+    .social{height: 170px; padding-top: 10px;}
+    .social .container{flex-direction: column; text-align: center; margin: 0 auto; justify-content: flex-start;}
+    .social .container .social-left{  width: 100%;}
+    .social .container .social-right {width: 100%; margin-top: 20px;}
+    .social .container .social-left p{padding-top: 15px;}
+}
+@media (min-width: 768px) and (max-width: 991px){ /*  For smal screen rules  */
+    .social{height: 110px}
+    .social .container .social-left{ width: auto;}
+}
+
+/*-------End of social------------*/
+
+/*------Start of Tabs-------------*/
+
+.tabs{ height: 550px; background-color: #F5F5F5; overflow: hidden;}
+.tabs .container{
+    height: 550px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.tabs .container .left{  width: 100px;}
+.tabs .container .middle{ max-width: 500px;}
+.tabs .container .right{
+    width: 40%;
+}
+.tabs .container .right img {width: 100%;}
+.tabs .container .left .boxes{
+    background-color: #333333;
+    text-transform: uppercase;
+    text-align: center;
+    width: 100px;
+    height: 110px;
+    color: #fff;
+    font-weight: 800;
+    padding-top: 35px;
+    font-family: open-sans;
+}
+.tabs .container .left .active{background-color: #FF8B38;border-top-left-radius: 5px;border-top-right-radius: 5px;}
+.tabs .container .left .last{border-bottom-left-radius: 5px;border-bottom-right-radius: 5px;}
+.tabs .container .left div:nth-child(n + 2){ border-top: 0.3px solid #fff;}
+.tabs .container .middle h2{ margin-bottom: 40px;}
+.tabs .container .middle p{color: #888;}
+.tabs .container .middle p:first-of-type{  margin-bottom: 20px;}
+.tabs .container .middle p:last-of-type{  margin-bottom: 40px;}
+
+.tabs .container .middle button{
+    background-color: #FF8B38;
+    color: #fff;
+    outline: none;
+    border: none;
+    padding: 10px 30px 10px 30px;
+    border: 1px solid #FF8B38;
+    border-radius: 6px;
+}
+.tabs .container .middle button:hover{cursor: pointer;}
+
+@media (max-width: 767px){ /*  For mobile &  tablet rules  */
+    .tabs{height: 639px; padding-top: 30px; width: 100%;}
+    .tabs .container{display: flex; flex-direction: column; justify-content: flex-start; align-items: center;}
+    .tabs .container .left{display: flex; width: auto;}
+    .tabs .container .left .boxes{padding: 20px; border-radius: 0; line-height: 4;}
+    .tabs .container .middle {order: 3; line-height: 1.6;}
+    /*.tabs .container .right{height: 350px; width: 300px;}*/
+    .tabs .container .middle h2{margin-bottom: 0; font-size: 19px; text-align: left; font-weight: 800; margin-left: 5px;}
+    .tabs .container .middle p{font-size: 12px; font-weight: 600; margin-left: 5px;}
+    .tabs .container .middle button{margin-left: 5px;}
+}
+
+@media (min-width: 768px) and (max-width: 991px){ /*  For smal screen rules  */
+    .tabs .container div:first-of-type{width: 20%;}
+    .tabs .container div:nth-of-type(2){width: 40%;}
+    .tabs .container .right{width: 40%;}
+    
+}
+@media (min-width: 992px) and (max-width: 1199px){ /*  For medium screen rules  */
+    .tabs .container div:first-of-type{width: 15%;}
+    .tabs .container div:nth-of-type(2){width: 45%;}
+    .tabs .container .right{width: 40%;}
+}
+/*------End of Tabs-------------*/
+
+/*-----Start of sub-container----*/
+
+.sub-section{  height: 550px;  background-color: #fff;}
+.sub-section .container{
+    display: flex;
+    flex-direction: row;
+    height: 550px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.sub-section .container .right{ height: 361px; width: 490px; background-color:#fff;}
+.sub-section .container .left{ height: 300px; width: 490px;}
+.sub-section .container .left img{ width: 100%; box-shadow: 0px 3px 17px -1px rgba(0,0,0,0.75);}
+.sub-section .container .right h2{ font-family: open-sans; margin-bottom: 15px;}
+.sub-section .container .right hr{
+    width: 50px;
+    height: 3px;
+    background-color: #FF8B38;
+    outline: none;
+    border: none;
+    margin-bottom: 15px;
+}
+.sub-section .container .right p{color: #888; line-height: 1.3;}
+.sub-section .container .right > p {margin-bottom: 30px;}
+.sub-section .container .right .subcon{display: flex; align-items: center; justify-content: center; margin-bottom: 23px;}
+.sub-section .container .right .subcon h3{margin-bottom: 10px;}
+.sub-section .container .right .subcon .icon i{color: #FF8B38; padding: 12px;}
+
+@media (min-width: 992px) and (max-width: 1199px){ /*  For medium screen rules  */
+    .sub-section .container .left{
+        width: 420px;
+    }
+    .sub-section .container .right{
+        width: 441px;
+    }
+    
+}
+@media (min-width: 768px) and (max-width: 991px){ /*  For smal screen rules  */
+    .sub-section .container {padding-bottom: 58px;}
+    .sub-section .container .right{
+        width: 330px;
+    }
+    .sub-section .container .left{
+        width: 350px;
+    }
+    
+}
+@media (max-width: 767px){ /*  For mobile &  tablet rules  */
+    .sub-section{
+        height: 831px;
+        width: 100%;
+    }
+    .sub-section .container{
+        padding-top: 25px;
+        flex-direction: column;
+        height: 750px;
+        padding-bottom: 30px;
+    }
+    .sub-section .container .left, .sub-section .container .right {width: 90%;}
+    .sub-section .container .right{height: auto; margin-top: 25px;}
+}
+
+
+/*-----End of sub-container------*/
+
+/*------Start of Standard---------*/
+.standard{
+    height: 567px;
+    background-color: #F5F5F5;
+}
+.standard .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 500px;
+}
+.standard .container .info{
+    width: 384px;
+}
+.standard .container .info h2{
+    font-family: open-sans;
+    margin-bottom: 15px;
+}
+.standard .container .info hr{
+    width: 50px;
+    height: 3px;
+    background-color: #FF8B38;
+    outline: none;
+    border: none;
+    margin-bottom: 15px;
+}
+.standard .container .info > p{color: #888; line-height: 1.3;}
+.standard .container .info p:first-of-type{
+    margin-bottom: 15px;
+}/*
+.standard .container .pic{
+    width: 400px;
+}*/
+.standard .container .pic img{
+    width: 100%;
+    box-shadow: 0px 3px 17px -1px rgba(0,0,0,0.75);
+}
+
+@media (max-width: 767px){ /*  For mobile &  tablet rules  */
+
+    .standard .container{
+        flex-direction: column;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    .standard .container .pic{order: 1;}
+    .standard .container .info{order: 2; margin-left: 15px;}
+    .standard .container .info hr{margin-left: 15px;}
+    .standard .container .info h2{margin-top: 18px; margin-left: 15px;}
+    .standard .container .info{width: auto;}
+}
+
+/*------End  of Standard---------*/
+
+/*--------Start of Awesome--------*/
+
+.awesome{
+    height: 600px;
+    padding-top: 40px;
+}
+.awesome .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 550px;
+    padding: 25px 0 25px 0;
+}
+
+.awesome .container .top h2{
+    font-size: 40px;
+    margin-bottom: 15px;
+    text-align: center;
+    font-weight: 100;
+    text-transform: uppercase;
+}
+.awesome .container .top hr{
+    width: 50px;
+    height: 3px;
+    background-color: #FF8B38;
+    outline: none;
+    border: none;
+    margin: 0 auto 30px;
+
+}
+.awesome .container .top p{text-align: center; color: #888;}
+.awesome .container .bottom{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+}
+.awesome .container .bottom  h3{margin-bottom: 30px;}
+.awesome .container .bottom p{
+    color: #888;
+    line-height: 1.3;
+}
+.awesome .container .bottom .icon i{color: #FF8B38; margin-top: 25%;}
+.awesome .container .bottom .icon{
+    height: 100px;
+    width: 100px;
+    margin: 0 auto;
+    border: 1.5px solid #FF8B38;
+    border-radius: 50%;
+    margin-bottom: 35px;
+}
+@media (max-width: 767px){ /*  custom extra small  */
+    .awesome{
+        width:100%;
+        height: 1178px;
+    }
+    .awesome .container .bottom{
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    .awesome .container{justify-content: flex-start;}
+    .awesome .container .bottom > *{
+        margin-top: 50px;
+
+    }
+}
+@media (max-width: 350px){
+    .awesome{
+        width:100%;
+        height: 1200px !important;
+    }
+}
+@media (max-width: 250px){
+    .awesome{
+        width:100%;
+        height: 1250px !important;
+    }
+}
+/*--------End of Awesome---------*/
+
+
+/*--------Start of Pricing--------*/
+.pricing{
+    height: 800px;
+    background-color: #F5F5F5;
+    padding: 50px 0 40px 0;
+}
+.pricing .container{
+    display: flex;
+    flex-direction: column;
+}
+.pricing .container .topper h2{
+    font-size: 40px;
+    margin-bottom: 15px;
+    text-align: center;
+    font-weight: 100;
+    text-transform: uppercase;
+}
+.pricing .container .topper hr{
+    width: 50px;
+    height: 3px;
+    background-color: #FF8B38;
+    outline: none;
+    border: none;
+    margin: 0 auto 30px;
+}
+.pricing .container .topper p{
+    text-align: center; color: #888;
+}
+.pricing .container .under{
+    display: flex;
+    flex-direction: row;
+    height: 390px;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+    margin-top: 110px;
+}
+.pricing .container .under > div{
+    width: 280px;
+}
+
+.pricing .container .under .basic  span,
+.pricing .container .under .pro  span,
+.pricing .container .under .enter  span{
+    display: block;
+}
+.pricing .container .under .basic header,
+.pricing .container .under .pro header,
+.pricing .container .under .enter header{
+    background-color: #333333;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 20px;
+    border-bottom: 2px solid #707070;
+}
+.pricing .container .under .basic div,
+.pricing .container .under .pro div,
+.pricing .container .under .enter div{
+    height: 120px;
+    background-color: #333333;
+    color: #fff;
+    text-align: center;
+    padding-top: 20px;
+    border-bottom: 4.5px solid #FF8B38;
+}
+.pricing .container .under .pro div{
+    height: 157px;
+    border: none;
+}
+.pricing .container .under .pro div span:last-of-type{
+    background-color: #FF8B38;
+    color: #fff;
+    height: 30px;
+    line-height: 2;
+}
+.pricing .container .under .pro{
+    transform: scale(1.2);
+}
+.pricing .container .under .basic div .price,
+.pricing .container .under .pro div .price,
+.pricing .container .under .enter div .price{ font-size: 60px; font-weight: 800;}
+
+.pricing .container .under .basic div .sp,
+.pricing .container .under .pro div .sp,
+.pricing .container .under .enter div .sp{color: #A0A0A0; font-style: italic; font-weight: 800; margin-bottom: 18px;}
+
+.pricing .container .under .basic div .price::first-letter,
+.pricing .container .under .pro div .price::first-letter,
+.pricing .container .under .enter div .price::first-letter{font-size: 16px;}
+
+.pricing .container .under .basic > span,
+.pricing .container .under .pro > span,
+.pricing .container .under .enter > span{
+    padding: 10px 20px 10px 20px;
+    border-bottom: 0.4px solid #F5F5F5;
+    background-color: #fff;
+    color: #888;
+}
+@media (min-width: 768px) and (max-width: 991px){ /*  For smal screen rules  */
+    .pricing .container .under{
+        flex-direction: column;
+        margin-top: 20px;
+        height: auto;
+    }
+    .pricing .container .under > div{margin: 10px;}
+    .pricing .container .under .pro{
+        transform: scale(1);
+    }
+    .pricing{
+        height: 1600px;
+    }
+    .pricing .container{
+        height: 1600px;
+    }
+    
+}
+@media (max-width: 767px){ /*  For mobile &  tablet rules  */
+    .pricing{width:100%;}
+    .pricing .container .under{
+        flex-direction: column;
+        margin-top: 20px;
+        height: auto;
+    }
+    .pricing .container .under > div{margin: 10px;}
+    .pricing .container .under .pro{
+        transform: scale(1);
+    }
+    .pricing{
+        height: 1600px;
+    }
+    .pricing .container{
+        height: 1600px;
+    }
+}
+
+
+/*--------End of Pricing--------*/
+
+
+
+/*-------Start of Testimonials-----*/
+
+.testimonials{
+    height: 500px;
+    padding: 15px;
+}
+.testimonials .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 500px;
+}
+.testimonials .container .up h2{
+    font-size: 40px;
+    margin-bottom: 15px;
+    text-align: center;
+    font-weight: 100;
+    text-transform: uppercase;
+}
+.testimonials .container .up hr{
+    width: 50px;
+    height: 3px;
+    background-color: #FF8B38;
+    outline: none;
+    border: none;
+    margin: 0 auto 30px;
+}
+.testimonials .container .up p{
+    text-align: center; color: #888;
+}
+.testimonials .container .down{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.testimonials .container .down .comments .con{
+    height: 150px;
+    width: 287px;
+    background-color: #F5F5F5;
+    margin: 0 30px 0 0;
+    position: relative;
+    color: #888;
+    line-height: 1.3;
+    font-style: italic;
+    padding: 10px 6px 10px 6px;
+}
+.testimonials .container .down .comments .con .arr{
+    height: 20px;
+    width: 20px;
+    background-color: #F5F5F5;
+    position: absolute;
+    top: 140px;
+    left: 36px;
+    transform: rotate(47deg);
+}
+.testimonials .container .down .comments .info img{
+    height: 100px;
+    width: 100px;
+    margin-top: 25px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+.testimonials .container .down .comments .info {
+    display: flex;
+    align-items: center;
+}
+.testimonials .container .down .comments .info .sub h4{
+    font-weight: 800;
+    font-size: 20px;
+}
+.testimonials .container .down .comments .info .sub span{
+    color: #777;
+    padding-left: 10px;
+    font-size: 13px;
+}
+
+@media (min-width: 768px) and (max-width: 991px){ /*  For smal screen rules  */
+    .testimonials .container .down {flex-direction: column; padding-top: 40px;}
+    .testimonials{ height: 1100px;}
+    .testimonials .container{justify-content: flex-start;  padding: 40px;}
+}
+@media (max-width: 767px){ /*  For mobile &  tablet rules  */
+    .testimonials{width:100%;}
+    .testimonials .container .down {flex-direction: column; padding-top: 40px;}
+    .testimonials{ height: 1200px;}
+    .testimonials .container{justify-content: flex-start;  padding: 40px;}
+    .testimonials .container .down .comments{margin: 10px 0;}
+    .testimonials .container .down .comments .con .arr{display: none;}
+}
+@media (max-width: 334px){
+    .testimonials .container .down .comments .con{max-width: auto !important; max-height: auto !important;}
+}
+/*-------End of Testimonials-----*/
+
+
+
+/*--------Start of Stylish-------*/
+.stylish{
+    height: 317px;
+    background-image: url('https://i.postimg.cc/fT2JnjTw/stylish.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    padding-top: 40px;
+    margin-top: 40px;;
+}
+.stylish::after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    opacity: 0.6;
+    background: linear-gradient(to right, black, black);
+}
+.stylish > * {z-index: 5; position: relative;}
+.stylish h2{
+    font-size: 40px;
+    margin-bottom: 15px;
+    text-align: center;
+    font-weight: 100;
+    text-transform: uppercase;
+    color: white;
+}
+.stylish hr{
+    width: 50px;
+    height: 3px;
+    background-color: #fff;
+    outline: none;
+    border: none;
+    margin: 0 auto 30px;
+}
+.stylish p{
+    text-align: center; color: #bbb;
+    margin-bottom: 30px;
+}
+.stylish button{
+    outline: none;
+    background: none;
+    border: 2px solid #fff;
+    padding: 10px 30px 10px 30px;
+    color: #fff;
+    display: block;
+    margin: 0 auto;
+}
+.stylish button:hover{ cursor: pointer; background-color:  rgba(150, 150, 150,0.5);}
+
+@media (max-width: 400px){ /*  custom extra small  */
+    .stylish{
+        width:100%;
+    }
+}
+
+/*--------End of Stylish-------*/
+
+/*-------Start of Contact us------*/
+.contact-us{
+    height: 500px;
+    padding: 50px;
+}
+.contact-us h2{
+    font-size: 40px;
+    margin-bottom: 15px;
+    text-align: center;
+    font-weight: 100;
+    text-transform: uppercase;
+}
+.contact-us hr{
+    width: 50px;
+    height: 3px;
+    background-color: #FF8B38;
+    outline: none;
+    border: none;
+    margin: 0 auto 30px;
+}
+.contact-us p{
+    text-align: center; color: #888;
+}
+.contact-us form input, textarea{
+    display: block;
+    margin: auto;
+    border: none;
+    outline: none;
+    width: 85%;
+    text-align: left;
+    padding: 10px;
+    margin-top: 15px;
+    border-bottom: 1px solid #d6d6d6;
+}
+.contact-us form .left{
+    float: left;
+    width: 45%;
+}
+.contact-us form .right{
+    float: right;
+    width: 45%;
+}
+.contact-us form button{
+    display: block;
+    background-color: #FF8B38;
+    color: #fff;
+    outline: none;
+    border: none;
+    padding: 10px 30px 10px 30px;
+    border: 1px solid #FF8B38;
+    border-radius: 6px;
+    margin: 30px auto 0;
+}
+.contact-us form button:hover{cursor: pointer;}
+.contact-us form textarea{
+    resize: none; 
+    width: 100%;
+    height: 140px;
+}
+@media (max-width: 400px){ /*  custom extra small  */
+    .contact-us{
+        width:100%;
+    }
+}
+/*-------End of Contact us------*/
+
+
+/*-------Start of footer---------*/
+footer{
+    height: 90px;
+    background-color: black;
+    padding: 15px;
+}
+footer .media i{
+    transition: all 0.5s ease-out;
+    color: #fff;
+    margin: 10px;
+}
+footer .media {text-align: center;}
+footer .media i:hover{ cursor: pointer; transform: scale(1.4);}
+footer p{
+    color: #888;
+    text-align: center;
+}
+@media (max-width: 400px){ /*  custom extra small  */
+    footer{
+        width:100%;
+    }
+}
+
+/*-------End of footer-------------*/
+
+.navbar, section, .social, .tabs, .sub-section, .standard, 
+.awesome, .pricing, .testimonials, .stylish, .contact-us, footer{ overflow: hidden; width: 100%; }
+
+/*------Start of Media Queries------------*/
+
+@media (max-width: 767px){ /*  For mobile &  tablet rules  */
+    .wrapper{width: 100%; padding-left: 0; padding-right: 0;}
+}
+@media (min-width: 768px) and (max-width: 991px){ /*  For smal screen rules  */
+    .wrapper{
+        width: 750px;
+    }
+    
+}
+@media (min-width: 992px) and (max-width: 1199px){ /*  For medium screen rules  */
+    .wrapper{
+        width: 970px;
+    }
+    
+}
+@media (min-width: 1200px){ /* For large screen rules */
+    .wrapper{
+        width: 1170px;
+    }
+    
+}
+
+/*------End of Media Queries------------*/
